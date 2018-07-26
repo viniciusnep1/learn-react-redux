@@ -1,12 +1,10 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "",
   "main": "src/loader.js",
   "scripts": {
     "dev": "nodemon",
-    "production": "pm2 start src/loader.js --name todo-app"
-
+      "production": "pm2 start src/loader.js --name todo-app"
   },
   "keywords": [],
   "author": "",
@@ -18,5 +16,7 @@
     "node-restful": "^0.2.5",
     "nodemon": "^1.11.0",
     "pm2": "^2.1.5"
-  }
+  },
+  "dependencies": {},
+  "description": ""
 }
