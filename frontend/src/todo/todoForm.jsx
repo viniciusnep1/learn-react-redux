@@ -1,8 +1,10 @@
 import React from 'react'
 import IconButton from '../template/iconButton'
+import { connect } from 'react-redux'
+import {bindActionCreators} from 'redux'
+import { changeDescription } from './todoAction'
 
-export default props => {
-    console.log(props.description);
+const TodoForm = props => {
 
     return (<div role="form" className="row  todoForm">
         <div className="col-xs-12 col-sm-9 col-md-10">
@@ -16,3 +18,11 @@ export default props => {
         </div>
     </div>)
 }
+
+const mapStateToProps = state =>({
+    description: state.todo.description
+})
+
+
+
+export default connect(mapStateToProps)(TodoForm)
